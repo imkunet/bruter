@@ -108,6 +108,12 @@ fn guess(
 
         for term in search_terms.iter() {
             if word.contains(term) {
+                info!("needle: {}", term);
+                info!(
+                    "haystack: {}",
+                    word.replace(term, &format!(" {} ", term.to_ascii_uppercase()))
+                );
+
                 let _ = done.send(number);
                 *finished.write().expect("could not write to finished state") = true;
                 return;
