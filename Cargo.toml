@@ -1,0 +1,12 @@
+[package]
+name = "bruter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.79"
+clap = { version = "4.4.13", features = ["derive"] }
+num_cpus = "1.16.0"
+tempfile = "3.9.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
