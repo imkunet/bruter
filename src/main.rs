@@ -56,9 +56,11 @@ impl State {
         let iteration_duration = Instant::now().duration_since(self.iteration);
         self.iteration = Instant::now();
 
+        let ips = self.counter as f64 / total_duration.as_secs_f64();
+
         info!(
-            "{:#?} total (last {:#?}); {} attempts",
-            total_duration, iteration_duration, self.counter
+            "{:#?} total (last {:#?}); {} attempts, {} attempts/s",
+            total_duration, iteration_duration, self.counter, ips
         );
     }
 }

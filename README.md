@@ -1,3 +1,6 @@
+# WARNING
+depreciated; use https://github.com/imkunet/bruter-zig for FAR BETTER performance (see README for more details).
+
 # bruter
 brute force an ssh key
 
